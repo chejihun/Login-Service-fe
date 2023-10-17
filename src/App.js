@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row className="add-item-row">
+        <Col xs={12} sm={10}>
+          <input
+            type="text"
+            placeholder="할일을 입력하세요"
+            className="input-box"
+          />
+        </Col>
+        <Col xs={12} sm={2}>
+          <button className="button-add">추가</button>
+        </Col>
+      </Row>
+
+      
+    </Container>
   );
 }
 
