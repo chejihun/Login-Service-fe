@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import TodoBoard from "./components/TodoBoard";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         </Col>
       </Row>
 
-      
+      <TodoBoard />
     </Container>
   );
 }
