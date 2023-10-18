@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 
 
-const TodoItem = ( {item, updateTask, deleteTask} ) => {
+const TodoItem = ({ item, updateTask, deleteTask }) => {
   return (
     <Row>
       <Col xs={12}>
@@ -11,10 +11,10 @@ const TodoItem = ( {item, updateTask, deleteTask} ) => {
 
           <div>
             <button className="button-delete" onClick={() => deleteTask(item._id)}>
-                삭제
+              삭제
             </button>
             <button className="button-delete" onClick={() => updateTask(item._id)}>
-                {item.isComplete ? `안끝남` : `끝남`}
+              {item.isComplete ? `안끝남` : `끝남`}
             </button>
           </div>
         </div>

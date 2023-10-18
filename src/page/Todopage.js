@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,7 +7,7 @@ import { useEffect, useState } from "react";
 import api from "./utils/api";
 import TodoItem from "./components/TodoItem";
 
-function App() {
+function TodoPage() {
 
   const [todoList, setTodoList] = useState([]);
   const [todoValue, setTodoValue] = useState("")
@@ -16,6 +15,10 @@ function App() {
     const response = await api.get("/tasks")
     setTodoList(response.data.data)
   }
+
+  useEffect(() => {
+    getTask();
+  }, [])
 
   const addTask = async () => {
     try {
@@ -55,9 +58,7 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    getTask();
-  }, [])
+
 
   return (
     <Container>
@@ -81,4 +82,4 @@ function App() {
   );
 }
 
-export default App;
+export default TodoPage;
