@@ -6,7 +6,9 @@ import Container from "react-bootstrap/Container";
 import TodoBoard from "./components/TodoBoard";
 import { useEffect, useState } from "react";
 import api from "./utils/api";
-
+import RegisterPage from "./pages/RegisterPage";
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 
 function TodoPage() {
 
@@ -79,6 +81,10 @@ function TodoPage() {
         <TodoBoard todoList={todoList} updateTask={updateTask} deleteTask={deleteTask} />
       </Container>
 
+      <Routes>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
     </div>
   );
 }
