@@ -76,3 +76,11 @@ body{
 .error-text{
   color:red;
 }
+.nav-menu {
+  display: flex;
+  justify-content: center
+}
+.link-menu {
+  text-decoration: none;
+  margin: 10px 10px 0 0 ;
+}
